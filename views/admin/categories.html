@@ -1,0 +1,37 @@
+{% extends './layout.html' %}
+
+{% block main %}
+
+<ol class="breadcrumb">
+    <li><a href="/">管理首页</a></li>
+    <li><span>分类列表</span></li>
+</ol>
+
+<h3>分类列表</h3>
+
+<table class="table table-hover table-striped" id="categoriesTable">
+
+    <tr>
+        <th>序号</th>
+        <th>分类名称</th>
+        <th>博客数量</th>
+        <th>操作</th>
+    </tr>
+
+    {% for item in list %}
+    <tr>
+        <td>{{loop.index}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.count}}</td>
+        <td>
+            <a href="/admin/category/edit?id={{item._id.toString()}}" class="edit">编辑</a>
+
+            {% if !item.count %}
+            <a href="javascript:;" class="remove" data-id="{{item._id.toString()}}">删除</a>
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

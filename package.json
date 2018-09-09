@@ -1,0 +1,22 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "denver;blog"
+  ],
+  "author": "v-denche",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookies": "^0.7.1",
+    "express": "^4.16.3",
+    "markdown": "^0.5.0",
+    "mongoose": "^5.2.13",
+    "swig": "^1.4.2"
+  }
+}
